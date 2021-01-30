@@ -26,5 +26,13 @@ io.on('connect' , function(socket){
         io.emit('nuevo_usuario',{usuario: data.usuario});
     });
 
+    // Recepcion de mensaje
+    socket.on('send_mensaje', function(data){
+        mensajeRecibido = data.mensaje;
+        usuarioRecibido = data.user;
+
+        // Envio del mensaje desde del servidor
+        io.emit('send_mensaje_server',{usuario:usuarioRecibido , mensaje:mensajeRecibido})
+    })
     
 });
