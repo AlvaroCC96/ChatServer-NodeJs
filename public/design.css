@@ -1,0 +1,25 @@
+#cont_mensaje {
+    width: 50%; 
+    background-color: aqua; 
+    border: solid 2px black;
+}
+p{
+    background-color: white;
+    padding: 5px;
+    border: solid 1px black;
+    margin: 10px; 
+    border-radius: 5px;
+}
+#texteable_div{
+    width: 50% !important;
+    background-color: burlywood;
+    border: solid 2px black;
+    padding-top: 5px;
+    
+
+}
+textarea{
+    margin: 5px;
+    width: 97%;
+    
+}
