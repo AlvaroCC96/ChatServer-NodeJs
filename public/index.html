@@ -11,6 +11,14 @@
     <script>
         // Conexion de los socket que se ejecutaran con el servidor 
         const socket = io.connect();
+        
+        // Emitir mensaje
+        socket.emit('datos_usuario',{correo: 'alvaro@gmail.com', usuario: 'ALVARO'})
+
+        // Recepcion mensaje
+        socket.on('nuevo_usuario',function(data){
+            alert("Nuevo Usuario: "+ data.usuario);
+        });
     </script>
 </body>
 </html>

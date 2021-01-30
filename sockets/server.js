@@ -17,4 +17,14 @@ const io = socketIo(server);
 // Escuchamos la conexion
 io.on('connect' , function(socket){
     console.log("Conexion entrante ID: "+socket.id);
+
+    // On y emit (Recibir y enviar)
+    socket.on('datos_usuario', function(data){
+        console.log("Correo: "+data.correo + " - Usuario: "+data.usuario);
+
+        //emit 
+        io.emit('nuevo_usuario',{usuario: data.usuario});
+    });
+
+    
 });
