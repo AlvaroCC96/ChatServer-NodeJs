@@ -1,11 +1,18 @@
 # ChatServer
 
-Chat server básico utilizando librerías de NodeJs (Socket.io y Express.js).
+Chat server básico utilizando Node.js
+
+## Librerías y Frameworks:
+
+- socket.io 
+- nodemon
+- express.js 
 
 ## Instalación
-Descargar o clonar el repositorio en su maquina.
 
-Si no tiene instalado Node.js instalarlo
+1) Descargar o clonar el repositorio en su maquina.
+
+2) Si no tiene instalado Node.js instalarlo desde la pagina oficial 
 
 ## Ejecución:
 
