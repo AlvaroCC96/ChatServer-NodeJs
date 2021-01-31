@@ -2,14 +2,16 @@
 const express  = require('express');
 const app = express();
 app.use(express.static('public'));
-app.set('port', process.env.PORT || 3000);
+const port = process.env.PORT || 3000;
 
 // Importamos la libreria http del SO 
 const http = require('http');
 
 const server = http.createServer(app);
 
-server.listen(3000);
+server.listen(port,function(){
+    console.log("Escuchando en el puerto: "+port);
+});
 
 // Sockets
 const socketIo = require('socket.io');
