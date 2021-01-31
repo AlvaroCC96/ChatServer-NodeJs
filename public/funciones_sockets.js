@@ -12,11 +12,20 @@ socket.on('send_mensaje_server',function(data){
 
 
 function loguearse(){
+
+    correo="";
+    usuario="";
     correo = $('#login_form #correo').val();
     usuario = $('#login_form #usuario').val();
 
-    // Emitir mensaje
-    socket.emit('datos_usuario',{correo: correo, usuario: usuario})
+    if (usuario!="" && correo!="") {
+         // Emitir mensaje
+        socket.emit('datos_usuario',{correo: correo, usuario: usuario})
+        $('#texteable_div').show();
+
+    } else {
+        alert("Ingrese sus datos para loguearse");
+    }
 }
 
 function enviarMensaje(){
